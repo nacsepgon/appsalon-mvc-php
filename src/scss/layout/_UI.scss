@@ -1,0 +1,69 @@
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+@use 'sass:color';
+
+.contenedor-app {
+    
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh; // Viewport height
+    }
+
+    .imagen {
+        height: 20rem;
+        background-image: url(../img/1.webp);
+        background-size: cover;
+        background-position: center center;
+
+        @include tablet {
+            height: auto;
+        }
+    }
+
+    .app {
+        width: 100%;
+        padding: 3rem 5%;
+        margin: 0 auto;
+        @include tablet {
+            overflow-y: scroll;
+        }
+    }
+}
+
+.barra {
+    margin: $separacion 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        color: $blanco;
+        span {
+            font-weight: $bold;
+        }
+    }
+
+    .boton {
+
+        flex-basis: 22rem;
+        
+        @include boton ($negro, $blanco);
+
+        & { margin: 0; }
+    }
+}
+
+.barra-servicios {
+    margin-bottom: $separacion;
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .boton {
+        margin: 0 0 1rem;
+    }
+}

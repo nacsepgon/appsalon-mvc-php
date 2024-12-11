@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'sass:color';
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+
+    scrollbar-color: color.adjust($burdeo, $lightness: 10%) transparent;
+    scrollbar-width: thin;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $burdeo;
+    color: $blanco;
+
+    // min-height: 100%;
+    @include tablet { height: 100%; }
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}

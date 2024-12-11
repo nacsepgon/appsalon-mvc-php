@@ -1,0 +1,24 @@
+@use 'base/variables' as *;
+@use 'base/mixins' as mix;
+
+.acciones {
+    margin-top: 5rem;
+
+    @include mix.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        &:first-child{
+            font-weight: $bold;
+        }
+        color: $blanco;
+        display: block;
+        margin-bottom: calc($separacion/2);
+        text-align: center;
+
+        
+    }
+}

@@ -1,0 +1,37 @@
+@use 'base/variables' as *;
+@use 'sass:color';
+
+.citas {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 1rem;
+        border-top: 1px solid color.adjust($burdeo, $lightness: 10%);
+
+        p {
+            font-weight: $bold;
+            color: $azul;
+        }
+
+        span, .servicios {
+            font-weight: $regular;
+            color: $blanco;
+        }
+
+        &:hover {
+            background-color: color.adjust($burdeo, $lightness: 10%);
+        }
+    }
+}
+
+.servicios {
+    @extend .citas;
+
+    .acciones {
+        margin: 0;
+    }
+    .boton, .boton-eliminar {
+        margin: 0 0 1rem;
+    }
+}
