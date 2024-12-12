@@ -27,8 +27,8 @@ class Email {
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
 
-        $mail->setFrom('nachosepgon@gmail.com');
-        $mail->addAddress('nachosepgon@gmail.com', 'AppSalon.com');
+        $mail->setFrom('appsalon@correo.com');
+        $mail->addAddress('appsalon@correo.com', 'AppSalon.com');
         $mail->Subject = 'Confirma tu cuenta en AppSalón';
 
         $mail->isHTML(true);
@@ -56,8 +56,8 @@ class Email {
         $mail->Username = $_ENV['EMAIL_USER'];
         $mail->Password = $_ENV['EMAIL_PASS'];
 
-        $mail->setFrom('nachosepgon@gmail.com');
-        $mail->addAddress('nachosepgon@gmail.com', 'AppSalon.com');
+        $mail->setFrom('appsalon@correo.com');
+        $mail->addAddress('appsalon@correo.com', 'AppSalon.com');
         $mail->Subject = 'Reestablece tu clave en AppSalón';
 
         $mail->isHTML(true);
